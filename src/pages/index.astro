@@ -1,0 +1,20 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Landing from "../sections/home/Landing.astro";
+import SoundPackages from "../sections/home/SoundPackages.astro";
+import Slider from "../sections/home/Slider.astro";
+import EquipmentRental from "../sections/home/EquipmentRental.astro";
+import ContactUs from "../sections/home/ContactUs.astro";
+
+const title = "BinGoa Events, Betalbatim - Goa";
+const description = "BinGoa Events, Betalbatim - Goa";
+const permalink = "https://bingoa.in";
+---
+
+<MainLayout {title} {description} {permalink}>
+	<Landing />
+	<Slider />
+	<SoundPackages />
+	<EquipmentRental />
+	<ContactUs />
+</MainLayout>

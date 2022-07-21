@@ -1,0 +1,56 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+const products = [
+    {
+        image: "/products/xdj-rx2.png",
+        category: "DJ Player",
+        name: "XDJ-RX2",
+        price: "1999",
+    },
+    {
+        image: "/products/xdj-rx3.png",
+        category: "DJ Player",
+        name: "XDJ-RX3",
+        price: "1999",
+    },
+    {
+        image: "/products/elite-17r.png",
+        category: "Sharpie ",
+        name: "Elite 17r",
+        price: "1999",
+    },
+];
+---
+
+<SectionLayout title="Equipment Rentals">
+    <div class="grid sm:grid-cols-3 gap-8 max-w-2xl mx-auto mt-8">
+        {
+            products.map((p) => (
+                <div class="bg-white rounded-lg flex sm:flex-col p-5 gap-5 align-center h-fit ">
+                    <div class="sm:h-32 w-32 flex items-center justify-center sm:mx-auto">
+                        <img
+                            src={p.image}
+                            alt={p.name}
+                            class="max-h-[8rem] max-w-[8rem]"
+                        />
+                    </div>
+                    <div class="sm:text-center">
+                        <span class="uppercase text-xs tracking-widest">
+                            {p.category}
+                        </span>
+                        <h3 class="text-3xl font-bold">{p.name}</h3>
+                        <div>
+                            <span>&#8377;</span>
+                            <span class="text-xl font-bold">{p.price}</span>
+                            <span>/day</span>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+    <p class="text-center mt-8">
+        <a href="#contact" class="underline">Contact us</a>
+        for more details.
+    </p>
+</SectionLayout>

@@ -1,0 +1,16 @@
+---
+const { service } = Astro.props;
+---
+
+<div
+    class="bg-white text-black rounded-lg text-center flex flex-col items-center pb-5 px-5 cursor-pointer group justify-end h-[100px]"
+>
+    <img
+        src={service.img}
+        alt={service.alt}
+        class="h-16 md:h-20 relative bottom-8 group-hover:h-24 transition-all duration-300"
+    />
+    <h3 class="font-bold -mt-5 md:text-xl lg:text-2xl">
+        {service.name}
+    </h3>
+</div>
