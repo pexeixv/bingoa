@@ -2,43 +2,54 @@
 import Service from "../../components/Service.astro";
 
 const services = [
-    {
-        name: "Event Planning",
-        img: "/emojis/party-popper.png",
-        alt: "party popper",
-    },
-    {
-        name: "Equipment Rental",
-        img: "/emojis/gear.png",
-        alt: "gear",
-    },
+  {
+    name: "Event Planning",
+    img: "/emojis/party-popper.png",
+    alt: "party popper",
+  },
+  {
+    name: "Equipment Rental",
+    img: "/emojis/gear.png",
+    alt: "gear",
+  },
 ];
 ---
 
 <main
-    class="bg-[url('/banner.jpg')] bg-no-repeat bg-cover bg-[center_bottom_40%]"
+  class="bg-[url('/banner.jpg')] bg-no-repeat bg-cover bg-[center_bottom_40%]"
 >
-    <div class="bg-black/50 text-white">
-        <div
-            class="container mx-auto px-5 py-20 min-h-[80vh] flex flex-col lg:flex-row items-start lg:items-center justify-around lg:justify-between gap-10 lg:gap-20"
+  <div class="bg-black/50 text-white">
+    <div
+      class="container mx-auto px-5 py-20 min-h-[80vh] flex flex-col lg:flex-row items-start lg:items-center justify-around lg:justify-between gap-10 lg:gap-20"
+    >
+      <div class="flex flex-col items-start gap-12">
+        <h1
+          class="font-black text-5xl md:text-6xl xl:text-8xl drop-shadow-lg max-w-[15ch] font-serif"
         >
-            <div class="flex flex-col items-start gap-12">
-                <h1
-                    class="font-black text-5xl md:text-6xl xl:text-8xl drop-shadow-lg max-w-[15ch] font-serif"
-                >
-                    Event planning is tough, but <span
-                        class="italic text-blue-300">we're here</span
-                    > to help you!
-                </h1>
-                <a
-                    href="#contact"
-                    class="py-3 px-5 bg-white text-black rounded-md font-bold"
-                    >Contact Us</a
-                >
-            </div>
-            <div class="flex lg:flex-col gap-4 lg:gap-24">
-                {services.map((service) => <Service {service} />)}
-            </div>
+          Event planning is tough, but <span class="italic text-blue-300"
+            >we're here</span
+          > to help you!
+        </h1>
+        <div class="flex gap-4">
+          <a
+            href="#gallery"
+            class="inline-flex items-center gap-3 py-3 px-5 bg-blue-200 text-black rounded-md font-bold hover:bg-blue-300 transition-colors duration-300"
+          >
+            <i class="fas fa-image"></i>
+            View Gallery
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-3 py-3 px-5 border-white border-2 text-white drop-shadow-lg bg-white/30 rounded-md font-bold hover:bg-white/70 hover:text-black transition-colors duration-300"
+          >
+            <i class="fas fa-phone"></i>
+            Contact Us
+          </a>
         </div>
+      </div>
+      <div class="flex lg:flex-col gap-4 lg:gap-24">
+        {services.map((service) => <Service {service} />)}
+      </div>
     </div>
+  </div>
 </main>
